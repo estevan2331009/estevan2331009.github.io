@@ -1,0 +1,143 @@
+:root {
+  --primary: #ed3b56;
+  --bg: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #010101;
+}
+
+/* Navber */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgbe(1, 1, 1, 0.8);
+  border-bottom: 1px solid #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #160707;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #100e0e;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #1e1c1c;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Menengahkan secara horizontal */
+  background-image: url("header-bg.jpeg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Hero Content */
+.content {
+  text-align: center; /* Menengahkan teks secara horizontal */
+  color: #010101; /* Warna teks untuk kontras dengan latar belakang */
+}
+
+.content h1 {
+  margin-bottom: 10px; /* Spasi bawah antara judul dan paragraf */
+}
+
+.content p {
+  margin-bottom: 10px; /* Spasi bawah antara paragraf */
+}
+
+.content .cta {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e7431e; /* Warna latar belakang untuk tombol */
+  color: #fff; /* Warna teks tombol */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px; /* Spasi atas antara paragraf dan tombol */
+}
+
+/* Media Queries*/
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758x) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
