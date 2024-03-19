@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+  }
+body{
+    background: #a8d1e7;
+    
+    
+}
+head{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding:20 px 10%;
+    background: #aca3a3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size:3000 px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 700;
+}
+.text{
+        
+    font-size: 30px;
+    color: #f78fb3;
+    height: 100vh;
+    justify-content: center ;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    top: 0;
+    margin-left: 1000 px;
+}
+.text-content {
+    max-width: 600px;
+    margin-left: 200px;
+}
+.text-content h3{
+    font-size: 56px;
+    font-weight: 700;
+}
+.text-content h2{
+    font-size: 36px;
+    font-weight: 800;
+    color: #d4809d ;
+}
+.text-content p{
+    color: rgb(0, 0, 0);
+}
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; 
+    filter: grayscale(75%);
+    
+}
+.navbar a{
+   
+    font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+    ;
+}
+
+.navbar a:hover, 
+.navbar .active{
+    color:  rgb(140, 0, 79);
+}
+
+body.dark .navbar a:hover, 
+.navbar .active{
+    color:  rgb(140, 0, 79);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: o;
+    width: 100%;
+    padding: 20px 10%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100%;
+    display: flex;
+    background-color: transparent;
+
+}

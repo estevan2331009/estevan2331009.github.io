@@ -66,32 +66,3 @@ header
     background: linear-gradient(#002b0d,gray);
     padding: 100px;
 }
-.sec h2
-{
-    font-size: 3em;
-    color: #fff;
-    margin-bottom: 50px;
-    position: relative;
-    top: 100px;
-}
-.sec img
-{
-    position: relative ;
-   left: 1300px;
-    top: -150px;
-    height: 100%;
-    width: 20%;
-    transform: rotate(-25deg);
-    resize: none;
-    margin: 20px;
-}
-.sec p
-{
-    position: relative;
-    top: 100px;
-    font-size: 2em;
-    color: #fff;
-    font-weight: 300;
-    margin-right: 1200px;
-    text-align: justify;
-}
