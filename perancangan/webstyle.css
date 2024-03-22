@@ -8,7 +8,8 @@
 }
 
 body {
-  background:linear-gradient(135deg,pink,#95c0ff);
+  background:linear-gradient(135deg,white,#95c0ff);
+  height:auto;
 }
 
 .side_bar {
@@ -17,7 +18,7 @@ body {
   left: -100%;
   width: 300px;
   height: 100vh;
-  background:linear-gradient(pink,#d8acff) ;
+  background:linear-gradient(white,silver) ;
   padding: 12px;
   box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1, inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
   transition: all 0.3s ease;
@@ -203,8 +204,8 @@ header{
 .notes{
   width: 100%;
   min-height:100vh ;
-  background:linear-gradient(135deg,pink,#95c0ff);
-  color: #fff;
+  background:linear-gradient(135deg,white,#95c0ff);
+  color: black;
   padding-top: 4%;
   padding-left: 30%;
 }
