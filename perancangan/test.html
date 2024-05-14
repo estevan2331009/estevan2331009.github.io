@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>test</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+   <nav class="nav">
+    <a href="#">Sevices</a>
+    <a href="#">About Us</a>
+    <a href="#">Home Page</a>
+    <a href="#">Log In</a>
+
+   </nav>
+   <div class="header">
+    <h2>My Services</h2>
+    <ul>
+        <li>Logo designing</li>
+        <li>Web developer</li>
+        <li>Cybersecrity</li> 
+    </ul>
+    </div>
+    <div class="GALLERY">
+        <h2>GALLERY</h2>
+        <img src="pan (2).jpg">
+        <img src="pan.jpg">
+    </div> 
+
+    <section id="gantitext">
+        <h2>Tekan tombol ini untuk ganti kata</h2>
+        <button onclick="gantitext()">Ganti Text</button>
+    </section>
+    <section id="contact">
+        <form onsubmit="return validateform()">
+        <h2>Hubungi Saya</h2>
+        <label>Nama:</label><br>
+        <input type= "text"id="nama" name="nama"><br><br>
+        <label>Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label>Telp:</label><br>
+        <input id="telp" name="telp"><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <div id="error" class="error"></div>
+    </section>
+
+<script src="test.js"></script>
+</body>
+<footer>
+    &copy;2024 2SIPA Website
+</footer>
+</html>
