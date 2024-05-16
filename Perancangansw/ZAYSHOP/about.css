@@ -16,14 +16,15 @@
     top: 0;
     margin-left: 800 px;
     
+    
 }
 .store-content {
     max-width: 600px;
-    margin-left: 200px;
+    
 }
 
 .store-content h2{
-    
+    padding: 0 10%;
     font-size: 36px;
     font-weight: 800;
     color: green;
@@ -36,8 +37,20 @@
 }
 .img{
     display: block;
-    margin-left: 1000px;
+    align-items: center;
+    padding: 0px 0px 0px;
     margin-right: auto;
+    margin-left: auto;
     max-width: 800px; 
     filter: grayscale(75%);
+    float: right;
+}
+
+.navbar-custom {
+    background-color: rgba(17, 17, 17, 1);
+}
+.linkmap{
+    float: right;
+    align-items: center;
+
 }
