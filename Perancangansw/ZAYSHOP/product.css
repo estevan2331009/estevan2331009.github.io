@@ -1,90 +1,120 @@
-/* unvisited link */
+/* Unvisited link */
 a.shop:link {
-    color: red;
-    text-decoration: none;
-    background-color: yellow;
-  }
-  
-  /* visited link */
-  a.shop:visited {
-    color: green;
-    text-decoration: none;
-    background-color: cyan;
-  }
-  
-  /* mouse over link */
-  a.shop:hover {
-    color: hotpink;
-    text-decoration: underline;
-    background-color: lightgreen;
-  }
-  
-  /* selected link */
-  a.shop:active {
-    color: blue;
-    text-decoration: underline;
-    background-color: hotpink;
-  }
-   
-  a.shop:link, a.shop:visited {
-    background-color: green;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-  }
-  
-  a.shop :hover, a.shop:active {
-    background-color: lightgreen;
-  }
+  color: red;
+  text-decoration: none;
+  background-color: yellow;
+}
 
-body{
-    margin: 0;
+/* Visited link */
+a.shop:visited {
+  color: green;
+  text-decoration: none;
+  background-color: cyan;
 }
-h3{
-    text-align: center;
-    font-size: 30px;
-    margin: 0;
-    padding-top: 10px;
-}
-.gallery1{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
-}
-.content1{
-    width: 20%;
-    margin: 15px;
-    box-sizing: border-box;
-    float: left;
-    text-align: center;
-    border-radius: 20px;
-    cursor: pointer;
-    padding-top: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 25),
-    0 10px 10px rgba(0, 0, 0, 22);
-    transition: .4s;
-    background: #f2f2f2; 
-}
-.content1 hover{
-    box-shadow: 0 3px 6px rgba(0, 0, 0,0.16),
-    rgba(0, 0, 0,0.23);
-    transform: translate(0px,-8px);
 
+/* Mouse over link */
+a.shop:hover {
+  color: hotpink;
+  text-decoration: underline;
+  background-color: lightgreen;
 }
-img.shop1{
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    margin: 0 auto;
-    display: block;
+
+/* Selected link */
+a.shop:active {
+  color: blue;
+  text-decoration: underline;
+  background-color: hotpink;
 }
-p{
-    text-align: center;
-    color: #b2bec3;
-    padding-top: 0 8px;
+
+a.shop:link, a.shop:visited {
+  background-color: green;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.shop:hover, a.shop:active {
+  background-color: lightgreen;
+}
+a.shop{
+  border-radius: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.gallery1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  gap: 20px; /* Menambahkan jarak antar kartu */
+}
+
+.content1 {
+  width: calc(30% - 40px); /* Menyesuaikan lebar kartu dan memperhitungkan jarak antar kartu */
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: .4s;
+  background: #f2f2f2;
+}
+
+.content1:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translate(0px, -8px);
+}
+
+img.shop1 {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+p {
+  text-align: center;
+  color: #b2bec3;
+  padding-top: 8px;
+}
+.content2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+a.shop2 {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px; /* Membuat sudut tombol bulat */
+  margin-bottom: 20px;
+  margin-top: 0;
+ transition: background-color 0.3s;
+}
+
+a.shop2:hover {
+  background-color: #45a049;
 }
