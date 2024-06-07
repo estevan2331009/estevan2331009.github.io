@@ -33,6 +33,7 @@ a.shop:link, a.shop:visited {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  margin-bottom: 10px;
 }
 
 a.shop:hover, a.shop:active {
@@ -51,6 +52,7 @@ h3 {
   font-size: 30px;
   margin: 0;
   padding-top: 10px;
+  margin-bottom: 30px;
 }
 
 .gallery1 {

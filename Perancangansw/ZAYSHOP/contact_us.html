@@ -95,7 +95,33 @@
 
         </div>
 
+        <!-- popup notifikasi -->
+    <div id="popupNotification" style="display: none;" class="popup">
+        <!-- Konten pop-up notifikasi di sini -->
+        Pesan Anda telah berhasil dikirim!
+    </div>
+    <!-- skrip JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.getElementById("contactForm");
 
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // menghentikan pengiriman formulir default
+
+                // menampilkan popup notifikasi
+                var popup = document.getElementById("popupNotification");
+                popup.style.display = "block";
+
+                // menutup popup notifikasi setelah beberapa detik
+                setTimeout(function () {
+                    popup.style.display = "none";
+                }, 3000); // waktu dalam milidetik (misalnya 3000 = 3 detik)
+
+                // mengosongkan input formulir
+                form.reset();
+            });
+        });
+    </script>
 
 
         <!--#tempelatewajibcopas-->
