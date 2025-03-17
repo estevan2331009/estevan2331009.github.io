@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bukan Salah Kita</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/bsk 1.png">
+    
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand me-lg-5 me-0" href="home.html">
+                    <img src="images/bsk 1.png" class="logo-image img-fluid" alt="templatemo pod talk">
+                </a>
+                <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">
+                    <div class="input-group input-group-lg">
+                        <input name="search" type="search" class="form-control" id="search" placeholder="Cari Konten" aria-label="Search">
+                        <button type="submit" class="form-control" id="submit">
+                            <i class="bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="merch.html">Merch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="ms-4">
+                        <a href="kuy-gabung.html" class="btn custom-btn custom-border-btn smoothscroll">Kuy Gabung!</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header class="site-header d-flex flex-column justify-content-center align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12 text-center">
+                        <h2 class="mb-0">Gabung Jadi Member Eksklusif!</h2>
+                        <p class="text-center" style="color: white;">Buat lo yang mau jadi lebih dari sekadar warga BSK—gabung dan dapetin konten eksklusif!</p>
+                        <h4 class="text-center mt-3">Hanya Rp14.999/bulan</h4>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section-padding" id="section_2">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <form class="custom-form" action="#" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="payment" class="form-label">Metode Pembayaran</label>
+                            <select class="form-control" id="payment">
+                                <option>Bank Transfer</option>
+                                <option>e-Wallet</option>
+                                <option>Kartu Kredit</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="receipt" class="form-label">Unggah Bukti Pembayaran</label>
+                            <input type="file" class="form-control" id="receipt" accept="image/*,application/pdf" required>
+                            <small class="form-text text-muted">Format yang diterima: JPG, PNG, atau PDF.</small>
+                        </div>
+                        <button type="button" class="btn custom-btn" id="submitBtn">Gabung Sekarang</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+       <!-- Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Pendaftaran Berhasil</h5>
+                <button type="button" class="btn-close" id="closeModal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                "Mantap! Pendaftaran lo berhasil. Cek email terus ya, tim kita bakal ngehubungin buat next step! 🚀"
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="okButton">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        $('#successModal').modal('show');
+    });
+
+    function redirectToHome() {
+        $('#successModal').modal('hide'); 
+        setTimeout(() => {
+            window.location.href = 'home.html';
+        }, 500);
+    }
+
+    document.getElementById('closeModal').addEventListener('click', redirectToHome);
+    document.getElementById('okButton').addEventListener('click', redirectToHome);
+</script>
+
+<style>
+    .modal-backdrop {
+        display: none !important;
+    }
+</style>
