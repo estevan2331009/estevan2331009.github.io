@@ -147,7 +147,7 @@
 
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="form-floating">
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
+                                        <input type="email" name="email" id="email" pattern="[^ @]@[^ @]"
                                             class="form-control" placeholder="Email address" required="">
 
                                         <label for="floatingInput">Alamat Email</label>
@@ -171,8 +171,7 @@
                                 </div>
 
                                 <div class="col-lg-4 col-12 ms-auto">
-                                    <button type="submit" class="form-control">Submit</button>
-                                </div>
+                                    <button type="button" class="btn custom-btn" id="submitBtn">Chat Sekarang</button>                                </div>
 
                             </div>
                         </form>
@@ -184,95 +183,45 @@
     </main>
 
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-    
-                <!-- Form Email (Follow) -->
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                    <div class="Follow-form-wrap">
-                        <h6>Ikuti Kami. Setiap Hari.</h6>
-    
-                        <form class="custom-form Follow-form" action="#" method="get" role="form">
-                            <input type="email" name="Follow-email" id="Follow-email" pattern="[^ @]*@[^ @]*"
-                                class="form-control" placeholder="Email Address" required="">
-    
-                            <div class="col-lg-12 col-12">
-                                <button type="submit" class="form-control" id="submit">Follow</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-    
-                <!-- Kolom Alamat -->
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0 mb-lg-0">
-                    <h6 class="site-footer-title mb-3">Alamat</h6>
-                    <p>
-                        <i class="bi bi-geo-alt-fill me-2"></i> Universitas Internasional Batam, Batam, Indonesia
-                    </p>
-                </div>
-    
-                <!-- Kolom Social Media -->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <h6 class="site-footer-title mb-3">Social Media</h6>
-    
-                    <ul class="social-icon">
-                        <li class="social-icon-item">
-                            <a href="https://www.instagram.com/bukansalahkita/" class="social-icon-link bi-instagram"></a>
-                        </li>
-    
-                        <li class="social-icon-item">
-                            <a href="https://www.tiktok.com/@bukansalahkita/"
-                                class="social-icon-link bi-tiktok"></a>
-                        </li>
-    
-                        <li class="social-icon-item">
-                            <a href="mailto:bukansalahkita05@gmail.com" class="social-icon-link bi-envelope"></a>
-                        </li>
-                    </ul>
-                </div>
-    
+     <!-- Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Chat Berhasil</h5>
+                <button type="button" class="btn-close" id="closeModal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                "Tunggu Balesan dari kami yak! tenang, fast respon kok."
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="okButton">OK</button>
             </div>
         </div>
-    
-        <div class="container pt-5">
-            <div class="row align-items-center">
-    
-                <div class="col-lg-2 col-md-3 col-12">
-                    <a class="navbar-brand" href="home.html">
-                        <img src="images/bsk 1.png" class="logo-image img-fluid" alt="templatemo pod talk">
-                    </a>
-                </div>
-    
-                <div class="col-lg-7 col-md-9 col-12">
-                    <ul class="site-footer-links">
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Homepage</a>
-                        </li>
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Browse Edisi</a>
-                        </li>
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Help Center</a>
-                        </li>
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div class="col-lg-3 col-12">
-                    <p class="copyright-text mb-0">Copyright © 2025 Bukan Salah Kita</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/custom.js"></script>
-    
-    </body>
-    </html>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        $('#successModal').modal('show');
+    });
+
+    function redirectToHome() {
+        $('#successModal').modal('hide'); 
+        setTimeout(() => {
+            window.location.href = 'home.html';
+        }, 500);
+    }
+
+    document.getElementById('closeModal').addEventListener('click', redirectToHome);
+    document.getElementById('okButton').addEventListener('click', redirectToHome);
+</script>
+
+<style>
+    .modal-backdrop {
+        display: none !important;
+    }
+</style>
